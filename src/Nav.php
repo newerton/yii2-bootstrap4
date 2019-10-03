@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap4;
+namespace newerton\bootstrap4;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -102,7 +103,7 @@ class Nav extends Widget
     /**
      * @var string name of a class to use for rendering dropdowns within this widget. Defaults to [[Dropdown]].
      */
-    public $dropdownClass = 'yii\bootstrap4\Dropdown';
+    public $dropdownClass = 'newerton\bootstrap4\Dropdown';
 
 
     /**

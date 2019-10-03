@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap4;
+namespace newerton\bootstrap4;
 
 use yii\base\InvalidConfigException;
 use yii\data\Pagination;
@@ -23,7 +24,7 @@ use yii\helpers\ArrayHelper;
  * ```php
  * 'container' => [
  *    'definitions' => [
- *       \yii\widgets\LinkPager::class => \yii\bootstrap4\LinkPager::class,
+ *       \yii\widgets\LinkPager::class => \newerton\bootstrap4\LinkPager::class,
  *    ],
  * ],
  * ```
@@ -305,7 +306,7 @@ class LinkPager extends Widget
         $currentPage = $this->pagination->getPage();
         $pageCount = $this->pagination->getPageCount();
 
-        $beginPage = max(0, $currentPage - (int)($this->maxButtonCount / 2));
+        $beginPage = max(0, $currentPage - (int) ($this->maxButtonCount / 2));
         if (($endPage = $beginPage + $this->maxButtonCount - 1) >= $pageCount) {
             $endPage = $pageCount - 1;
             $beginPage = max(0, $endPage - $this->maxButtonCount + 1);

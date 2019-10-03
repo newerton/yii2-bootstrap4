@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap4;
+namespace newerton\bootstrap4;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -18,8 +19,8 @@ use yii\helpers\ArrayHelper;
  * or [[\yii\widgets\Menu]] to build up such content. For example,
  *
  * ```php
- * use yii\bootstrap4\NavBar;
- * use yii\bootstrap4\Nav;
+ * use newerton\bootstrap4\NavBar;
+ * use newerton\bootstrap4\Nav;
  *
  * NavBar::begin(['brandLabel' => 'NavBar Test']);
  * echo Nav::widget([
@@ -149,7 +150,7 @@ class NavBar extends Widget
 
         echo Html::beginTag($navTag, $navOptions) . "\n";
         if ($this->renderInnerContainer) {
-            echo Html::beginTag('div', $this->innerContainerOptions)."\n";
+            echo Html::beginTag('div', $this->innerContainerOptions) . "\n";
         }
         echo $brand . "\n";
         echo $this->renderToggleButton() . "\n";

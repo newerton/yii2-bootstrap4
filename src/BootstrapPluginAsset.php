@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap4;
+namespace newerton\bootstrap4;
 
 use yii\web\AssetBundle;
 
@@ -22,6 +23,6 @@ class BootstrapPluginAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\JqueryAsset',
-        'yii\bootstrap4\BootstrapAsset',
+        'newerton\bootstrap4\BootstrapAsset',
     ];
 }

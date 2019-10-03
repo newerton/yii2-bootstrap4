@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap4;
+namespace newerton\bootstrap4;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -127,7 +128,7 @@ class Tabs extends Widget
     /**
      * @var string name of a class to use for rendering dropdowns withing this widget. Defaults to [[Dropdown]].
      */
-    public $dropdownClass = 'yii\bootstrap4\Dropdown';
+    public $dropdownClass = 'newerton\bootstrap4\Dropdown';
 
     /**
      * @var array Tab panes (contents)
@@ -155,11 +156,11 @@ class Tabs extends Widget
         $this->registerPlugin('tab');
         $this->prepareItems($this->items);
         return Nav::widget([
-                'dropdownClass' => $this->dropdownClass,
-                'options' => ArrayHelper::merge(['role' => 'tablist'], $this->options),
-                'items' => $this->items,
-                'encodeLabels' => $this->encodeLabels,
-            ]) . $this->renderPanes($this->panes);
+            'dropdownClass' => $this->dropdownClass,
+            'options' => ArrayHelper::merge(['role' => 'tablist'], $this->options),
+            'items' => $this->items,
+            'encodeLabels' => $this->encodeLabels,
+        ]) . $this->renderPanes($this->panes);
     }
 
     /**

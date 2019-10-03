@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap4;
+namespace newerton\bootstrap4;
 
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
@@ -92,7 +93,7 @@ class ButtonDropdown extends Widget
     /**
      * @var string name of a class to use for rendering dropdowns withing this widget. Defaults to [[Dropdown]].
      */
-    public $dropdownClass = 'yii\bootstrap4\Dropdown';
+    public $dropdownClass = 'newerton\bootstrap4\Dropdown';
     /**
      * @var bool whether to render the container using the [[options]] as HTML attributes. If set to `false`,
      * the container element enclosing the button and dropdown will NOT be rendered.
@@ -181,12 +182,12 @@ class ButtonDropdown extends Widget
         }
 
         return Button::widget([
-                'tagName' => $this->tagName,
-                'label' => $label,
-                'options' => $buttonOptions,
-                'encodeLabel' => false,
-                'view' => $this->getView(),
-            ]) . "\n" . $splitButton;
+            'tagName' => $this->tagName,
+            'label' => $label,
+            'options' => $buttonOptions,
+            'encodeLabel' => false,
+            'view' => $this->getView(),
+        ]) . "\n" . $splitButton;
     }
 
     /**
